@@ -3,7 +3,9 @@
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -22,26 +24,141 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
+}
+
+/* My code */
+.body-wrapper {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 200px 1fr;
+
+  border: 1px solid purple;
+}
+
+.sidebar {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+
+  border: 1px solid goldenrod
+}
+
+.header {
+  grid-column: 2;
+  grid-row: 1;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  border: 1px solid palevioletred;
+}
+
+.top-row {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+
+  display: grid;
+  grid-template-columns: 6fr 1fr 2fr;
+}
+
+.bottom-row {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.content {
+  grid-column: 2;
+  grid-row: 2;
+
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: 50px 1fr 50px 1fr;
+}
+
+.projects-section-title {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.project-wrapper {
+  grid-column: 1;
+  grid-row: 2 / span 3;
+
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+  grid-auto-rows: 200px;
+
+}
+
+.content-sidebar{
+  grid-column: 2;
+  grid-row: 1 / span 4;
+
+  display: grid;
+
+  grid-template-rows: subgrid;
+}
+
+.app-announcements{
+  grid-row: 1;
+}
+
+.announcements-section{
+  grid-row: 2;
+}
+
+.trending-profiles{
+  grid-row: 3;
+}
+
+.trending-sections{
+  grid-row: 4;
 }
