@@ -254,9 +254,15 @@ a {
   background-color: #eee;
 }
 
-.projects-section-title {
+.projects {
   grid-column: 1;
   grid-row: 1;
+}
+
+.section-title{
+  display: grid;
+  align-items: end;
+  padding-bottom: 8px;
 }
 
 .project-wrapper {
@@ -319,6 +325,21 @@ a {
 
 .announcements-section {
   grid-row: 2;
+
+  display: grid;
+
+  padding: 0 2.5em;
+  background-color: white;
+
+  border-radius: 20px;
+}
+
+.announcement-card-body{
+  padding: 20px 0;
+}
+
+.announcement-card-body:not(.announcement-card-body:last-child){
+  border-bottom: 2px solid black;
 }
 
 .trending-profiles {
