@@ -69,6 +69,12 @@ h6 {
 }
 
 /* My code */
+
+:root{
+  --div-border-radius: 20px;
+  --div-shadow-box: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 .body-wrapper {
   min-height: 100vh;
 
@@ -148,6 +154,7 @@ a {
   padding: 20px;
 
   background-color: white;
+  box-shadow: var(--div-shadow-box);
 }
 
 .top-row {
@@ -256,6 +263,7 @@ a {
   gap: 0 30px;
 
   background-color: #eee;
+  z-index: -1;
 }
 
 .projects {
@@ -287,9 +295,9 @@ a {
 
   padding: 30px 25px;
 
-  border-radius: 25px;
+  border-radius: var(--div-border-radius);
 
-  box-shadow: 10px 0px inset goldenrod;
+  box-shadow: 10px 0px inset goldenrod, var(--div-shadow-box);
 
   background-color: white;
 }
@@ -335,7 +343,7 @@ a {
   padding: 0 2.5em;
   background-color: white;
 
-  border-radius: 20px;
+  border-radius: var(--div-border-radius);
 }
 
 .announcement-card-body{
@@ -350,12 +358,14 @@ a {
   grid-row: 3;
 }
 
-.trending-sections {
+.trending-section {
   grid-row: 4;
 
   display: grid;
   grid-template-rows: repeat(min-content);
   background-color: white;
+
+  border-radius: var(--div-border-radius);
 }
 
 .trending-card{
@@ -384,4 +394,10 @@ a {
   grid-row: 2;
 
   color: #3a3a3a;
+}
+
+.header,
+.announcements-section,
+.trending-section{
+  box-shadow: var(--div-shadow-box);
 }
