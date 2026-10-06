@@ -74,7 +74,7 @@ h6 {
 
   display: grid;
   grid-template-columns: minmax(300px, 325px) 1fr;
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: min-content 1fr;
 }
 
 .sidebar {
@@ -133,7 +133,7 @@ a {
 
 .header,
 .content {
-  padding: 25px 50px 0 25px;
+  padding: 0 50px 20px 30px;
 }
 
 .header {
@@ -143,6 +143,9 @@ a {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: min-content min-content;
+  gap: 20px;
+
+  padding: 20px;
 
   background-color: white;
 }
@@ -248,7 +251,7 @@ a {
 
   display: grid;
   grid-template-columns: 2.5fr 1fr;
-  grid-template-rows: 50px 1fr 50px 1fr;
+  grid-template-rows: 70px 1fr 70px 1fr;
 
   gap: 0 30px;
 
