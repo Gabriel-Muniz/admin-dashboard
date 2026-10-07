@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -86,6 +88,7 @@ h6 {
   grid-template-columns: minmax(300px, 325px) 1fr;
   grid-template-rows: min-content 1fr;
 
+  font-family: 'Inter', sans-serif;
   color: var(--default-text-color);
 
 }
@@ -295,7 +298,6 @@ a {
   align-self: center;
 }
 
-
 .content {
   grid-column: 2;
   grid-row: 2;
@@ -319,6 +321,8 @@ a {
   display: grid;
   align-items: end;
   padding-bottom: 8px;
+
+  font-family: "Roboto Mono", monospace;
 }
 
 .project-wrapper {
@@ -328,7 +332,7 @@ a {
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-auto-rows: 250px;
+  grid-auto-rows: minmax(250px, auto-fit);
 
 }
 
