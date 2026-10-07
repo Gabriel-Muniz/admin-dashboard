@@ -75,12 +75,16 @@ h6 {
 :root {
   --div-border-radius: 20px;
   --div-shadow-box: 2px 4px 6px rgba(0, 0, 0, 0.2);
-  --div-hover-shadow-box: 2px 4px 3px rgba(0, 0 ,0 , 0.25);
+  --div-hover-shadow-box: 2px 4px 3px rgba(0, 0, 0, 0.25);
   --primary-color: #42133f;
   --secondary-color: #fcfcf2;
   --accent-color: #42133f;
   --absence-color: #d5dde4;
   --default-text-color: #101010;
+
+  --icon-filter-secondary-color: invert(100%) sepia(94%) saturate(459%) hue-rotate(299deg) brightness(109%) contrast(98%);
+  --icon-filter-default-text-color: invert(0%) sepia(0%) saturate(6720%) hue-rotate(224deg) brightness(108%) contrast(87%);
+  --icon-filter-accent-color: invert(6%) sepia(93%) saturate(2371%) hue-rotate(287deg) brightness(98%) contrast(93%);
 }
 
 .body-wrapper {
@@ -146,7 +150,7 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
-  content: '';
+  content: "";
   background-color: #00a2a8;
   width: 0;
   height: 100%;
@@ -386,7 +390,7 @@ a {
     content: "";
   }
 
-  &:hover{
+  &:hover {
     box-shadow: var(--div-hover-shadow-box);
   }
 }
@@ -497,17 +501,48 @@ a {
   border-radius: var(--div-border-radius);
 }
 
+.action-icon-wrapper {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+
+    border-radius: 50%;
+  }
+
+  &:hover::before {
+    top: -25%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+
+    background-color: var(--accent-color);
+
+    transition: all 0.15s ease-in-out;
+  }
+
+  &:hover>.action-icon {
+    filter: var(--icon-filter-secondary-color);
+  }
+}
+
 /* SVG FILTERING */
 
 .sidebar-icon,
 .dashboard-icon {
-  filter: invert(100%) sepia(94%) saturate(459%) hue-rotate(299deg) brightness(109%) contrast(98%);
+  filter: var(--icon-filter-secondary-color);
 }
 
 .top-row>.icon {
-  filter: invert(0%) sepia(0%) saturate(6720%) hue-rotate(224deg) brightness(108%) contrast(87%);
+  filter: var(--icon-filter-default-text-color);
 }
 
 .action-icon {
-  filter: invert(6%) sepia(93%) saturate(2371%) hue-rotate(287deg) brightness(98%) contrast(93%);
+  filter: var(--icon-filter-accent-color);
 }
