@@ -97,7 +97,7 @@ h6 {
   grid-column: 1;
   grid-row: 1 / span 2;
 
-  padding: 8px 24px;
+  padding: 8px 0;
 
   background-color: var(--primary-color);
 
@@ -119,21 +119,46 @@ h6 {
 
 .sidebar-icon {
   width: 1.6em;
+
+  justify-self: center;
+
+  &.large{
+    width: 1.4em;
+  }
 }
 
 a {
+  display: block;
+  position: relative;
   text-decoration: none;
   color: initial;
 }
 
 .nav-item {
-  padding: 5px 0;
+  position: relative;
+  padding: 5px 24px;
   transition: all 0.2s;
   box-shadow: none;
 }
 
-.nav-item:hover {
-  box-shadow: 0px 4px lightgray;
+.nav-item::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  content: '';
+  background-color: #00a2a8;
+  width: 0;
+  height: 100%;
+  filter: opacity(0%);
+
+  transition: all 0.15s ease-in-out;
+
+}
+
+.nav-item:hover::before {
+  left: 0;
+  width: 100%;
+  filter: opacity(15%);
 }
 
 .nav-link {
