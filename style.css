@@ -421,3 +421,18 @@ a {
 .trending-section {
   box-shadow: var(--div-shadow-box);
 }
+
+/* SVG FILTERING */
+
+.sidebar-icon,
+.dashboard-icon {
+  filter: invert(100%) sepia(94%) saturate(459%) hue-rotate(299deg) brightness(109%) contrast(98%);
+}
+
+.top-row>.icon {
+  filter: invert(0%) sepia(0%) saturate(6720%) hue-rotate(224deg) brightness(108%) contrast(87%);
+}
+
+.action-icon {
+  filter: invert(6%) sepia(93%) saturate(2371%) hue-rotate(287deg) brightness(98%) contrast(93%);
+}
