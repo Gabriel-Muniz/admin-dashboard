@@ -122,7 +122,7 @@ h6 {
 
   justify-self: center;
 
-  &.large{
+  &.large {
     width: 1.4em;
   }
 }
@@ -370,9 +370,7 @@ a {
 
   padding: 30px 25px;
 
-  border-radius: var(--div-border-radius);
-
-  box-shadow: 10px 0px inset var(--accent-color), var(--div-shadow-box);
+  box-shadow: 10px 0px inset var(--accent-color);
 
   background-color: var(--secondary-color);
 }
@@ -417,8 +415,6 @@ a {
 
   padding: 0 2.5em;
   background-color: var(--secondary-color);
-
-  border-radius: var(--div-border-radius);
 }
 
 .announcement-card-body {
@@ -439,8 +435,6 @@ a {
   display: grid;
   grid-template-rows: repeat(min-content);
   background-color: var(--secondary-color);
-
-  border-radius: var(--div-border-radius);
 }
 
 .trending-card {
@@ -475,9 +469,16 @@ a {
 }
 
 .header,
+.card-body,
 .announcements-section,
 .trending-section {
   box-shadow: var(--div-shadow-box);
+}
+
+.card-body,
+.announcements-section,
+.trending-section {
+  border-radius: var(--div-border-radius);
 }
 
 /* SVG FILTERING */
