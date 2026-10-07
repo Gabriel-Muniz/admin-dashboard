@@ -75,6 +75,7 @@ h6 {
 :root {
   --div-border-radius: 20px;
   --div-shadow-box: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  --div-hover-shadow-box: 2px 4px 3px rgba(0, 0 ,0 , 0.25);
   --primary-color: #42133f;
   --secondary-color: #fcfcf2;
   --accent-color: #42133f;
@@ -383,6 +384,10 @@ a {
     width: 12px;
     background-color: var(--accent-color);
     content: "";
+  }
+
+  &:hover{
+    box-shadow: var(--div-hover-shadow-box);
   }
 }
 
